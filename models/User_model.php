@@ -1,8 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-/**
- * @brief User model
- *
+ /**
+ * @brief     User Model
+ * @details
  * The model works using one table: it contains the users.
  * The model provides functions to get info on the users.
  *
@@ -23,10 +22,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
- *
- * @author Balint Morvai
- * @license MIT
- * @package ci_pm
+ * @author    Balint Morvai
+ * @version   0.9
+ * @copyright MIT License
  */
 class User_model extends CI_Model {
 	/**

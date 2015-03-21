@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
- * @brief Private messaging model
- *
+ * @brief     Pm Model
+ * @details
  * The model works using two tables: table1 contains the messages, table2
  * the referencing between the messages and the recipients - by message
  * and user IDs.
@@ -32,10 +32,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
- *
- * @author Balint Morvai
- * @license MIT
- * @package ci_pm
+ * @author    Balint Morvai
+ * @version   0.9
+ * @copyright MIT License
  */
 class Pm_model extends CI_Model {
 	/**

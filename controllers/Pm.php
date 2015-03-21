@@ -1,7 +1,51 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 /**
- * @brief Private messaging controller
+ * @mainpage
+ * @section Introduction
+ * This is a simple boilerplate for a CodeIgniter private messaging system.
+ * It comes with the following functionality:
+ * \li Send messages to multiple users
+ * \li Reply, delete, restore messages
+ * \li Browse messages by status: deleted, unread, not deleted, sent, ...
+ * \li AJAX ready function for auto-completing recipient names
+ * \li ORM like base classes to convert MySQL types to PHP types
+ * \li Sample views to demonstrate usage
+ * \li Database structure and sample content
+ * 
+ * It is written according to the CI coding guides, but it does not support
+ * database prefixes.
  *
+ * @section Installation
+ * Grab a fresh CodeIgniter installation and connect it to a MySQL database.
+ * Download all ci_pm files and extract them to your "application" CI folder.
+ * Be sure to overwrite the "constants.php" file! As next step open the 
+ * "db.sql" file in the "application" folder and execute its contents
+ * in a MySQL db. Delete the file afterwards.
+ * Now you should be able to reach the module via ".../index.php/pm".
+ *
+ * @section Usage
+ *
+ * To test the system surf to ".../index.php/pm" on your server. To test the
+ * auto-completing of recipient names enter only "Foo" to the recipient
+ * field and click "send".
+ * 
+ * To use the private messaging system with your own application you will
+ * want to extend the {@link User_model} with your own user authentication
+ * system. Therefore you have to replace the "current_id" method in
+ * {@link User_model} with your own method returning the id of the currently
+ * logged in user. {@link Pm_model} uses "current_id" to get the user id
+ * of the current user.
+ *
+ * As next step you will want to replace the views and implement e.g. AJAX calls
+ * to auto-complete recipient names or show more of the backend messages to the user.
+ * Also you might want to delete the sample contents from the database and implement
+ * your own routing.
+ */
+
+/**
+ * @brief     Pm Controller
+ * @details
  * Some methods in this controller will set a flashdata status message
  * to be used by the views they load. (e.g. {@link messages})
  * Most methods also pass variables to the views they load.
@@ -27,10 +71,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
- *
- * @author Balint Morvai
- * @license MIT
- * @package ci_pm
+ * @author    Balint Morvai
+ * @version   0.9
+ * @copyright MIT License
  */
 class Pm extends CI_Controller {
 	/**

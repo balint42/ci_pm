@@ -1,8 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 /**
- * @brief Table_model
- *
+ * @brief     Table Model
+ * @details
  * The model can be used by all higher models and contains basic info
  * on the tables used and it writes and reads all tables and contains
  * functions therefore. Results are stored in the "results" array and
@@ -28,10 +27,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
- *
- * @author Balint Morvai
- * @license MIT
- * @package ci_pm
+ * @author    Balint Morvai
+ * @version   0.9
+ * @copyright MIT License
  */
 class Table_model {
 	/**
